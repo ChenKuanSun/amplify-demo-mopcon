@@ -1,18 +1,38 @@
-<nb-card class="example-card" [status]="'primary'">
-  <nb-card-header>
-    Amplify Angular App
-  </nb-card-header>
-  <nb-card-body [nbSpinner]="loading$ | async" nbSpinnerStatus="info">
-    <div>Angular Serverless App</div>
-    <div class="upload-btn-wrapper">
-      <button nbButton [status]="'primary'">Taka a picture</button>
-      <input type="file" accept="image/*" capture="camera" (change)="this.image$.next($event.target.files[0])">
-    </div>
-  </nb-card-body>
-  <nb-list nbInfiniteList>
-    <nb-list-item *ngFor="let label of (labels$ | async)">
-      <div>{{ label.label }}</div>
-      <div>{{ label.count }}</div>
-    </nb-list-item>
-  </nb-list>
-</nb-card>
+<nb-reveal-card>
+  <nb-card-front>
+    <nb-card class="example-card" [status]="'primary'">
+      <nb-card-header>
+        Amplify Angular App
+      </nb-card-header>
+      <nb-card-body [nbSpinner]="loading$ | async" nbSpinnerStatus="info">
+        <div>Angular Serverless App</div>
+        <div class="upload-btn-wrapper">
+          <button nbButton [status]="'primary'">Take a picture</button>
+          <input type="file" accept="image/*" capture="camera" (change)="this.image$.next($event.target.files[0])">
+        </div>
+      </nb-card-body>
+      <nb-list nbInfiniteList>
+        <nb-list-item *ngFor="let label of (labels$ | async)">
+          <div>{{ label.label }}</div>
+          <div>{{ label.count }}</div>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card class="example-card" [status]="'primary'">
+      <nb-card-header>
+        DynamoDB Real-Time Storage
+      </nb-card-header>
+      <nb-card-body>
+        <a href="https://amazonmr.au1.qualtrics.com/jfe/form/SV_bBDi8843JDHyKeV?Q_CHL=qr">問卷調查</a>
+      </nb-card-body>
+      <nb-list nbInfiniteList>
+        <nb-list-item *ngFor="let label of (globalLabels$ | async)">
+          <div>{{ label.label }}</div>
+          <div>{{ label.count }}</div>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </nb-card-back>
+</nb-reveal-card>

@@ -27,6 +27,7 @@ export class IndexComponent implements OnInit, OnDestroy {
 
   loading$ = new BehaviorSubject<boolean>(false);
   labels$ = new BehaviorSubject<PredictionLabel[]>([]);
+  globalLabels$ = new BehaviorSubject<PredictionLabel[]>([]);
   image$ = new Subject<any>();
   queryData$ = new BehaviorSubject<void>(null);
 
@@ -35,7 +36,7 @@ export class IndexComponent implements OnInit, OnDestroy {
       .pipe(
         map(response => response.items),
         map(items => this.uniqClassify(items)),
-        tap(items => this.labels$.next(items))
+        tap(items => this.globalLabels$.next(items))
       )
 
   ngOnInit() {
@@ -47,6 +48,7 @@ export class IndexComponent implements OnInit, OnDestroy {
         tap(() => this.loading$.next(true)),
         concatMap(image => this.predictLabel$(image)),
         map((predictLabels) => this.classifyLabel(predictLabels)),
+        tap((orginLabels) => this.labels$.next(orginLabels)),
         concatMap((orginLabels) => this.postPredictions$(orginLabels)),
         tap(() => this.loading$.next(false)),
       ).subscribe(),
