@@ -4,9 +4,18 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import Amplify, { PubSub, API } from 'aws-amplify';
+import Predictions, { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
+Amplify.addPluggable(new AmazonAIPredictionsProvider());
 if (environment.production) {
   enableProdMode();
 }
+
+PubSub.configure(awsconfig);
+API.configure(awsconfig);
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

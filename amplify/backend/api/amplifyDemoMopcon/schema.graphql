@@ -1,0 +1,10 @@
+type Prediction @model @auth(rules: [{ allow: public }]){
+  id: ID!
+  label: String!
+  count: Int!
+}
+
+type QueryPredictions @model @auth(rules: [{ allow: public }]){
+  id: ID!
+  predictions: [Prediction] @connection
+}

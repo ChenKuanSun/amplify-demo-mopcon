@@ -1,0 +1,46 @@
+# this is an auto generated file. This will be overwritten
+mutation CreatePrediction($input: CreatePredictionInput!) {
+  createPrediction(input: $input) {
+    id
+    label
+    count
+  }
+}
+mutation UpdatePrediction($input: UpdatePredictionInput!) {
+  updatePrediction(input: $input) {
+    id
+    label
+    count
+  }
+}
+mutation DeletePrediction($input: DeletePredictionInput!) {
+  deletePrediction(input: $input) {
+    id
+    label
+    count
+  }
+}
+mutation CreateQueryPredictions($input: CreateQueryPredictionsInput!) {
+  createQueryPredictions(input: $input) {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}
+mutation UpdateQueryPredictions($input: UpdateQueryPredictionsInput!) {
+  updateQueryPredictions(input: $input) {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}
+mutation DeleteQueryPredictions($input: DeleteQueryPredictionsInput!) {
+  deleteQueryPredictions(input: $input) {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}

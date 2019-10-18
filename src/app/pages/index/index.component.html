@@ -1,0 +1,18 @@
+<nb-card class="example-card" [status]="'primary'">
+  <nb-card-header>
+    Amplify Angular App
+  </nb-card-header>
+  <nb-card-body [nbSpinner]="loading$ | async" nbSpinnerStatus="info">
+    <div>Angular Serverless App</div>
+    <div class="upload-btn-wrapper">
+      <button nbButton [status]="'primary'">Taka a picture</button>
+      <input type="file" accept="image/*" capture="camera" (change)="this.image$.next($event.target.files[0])">
+    </div>
+  </nb-card-body>
+  <nb-list nbInfiniteList>
+    <nb-list-item *ngFor="let label of (labels$ | async)">
+      <div>{{ label.label }}</div>
+      <div>{{ label.count }}</div>
+    </nb-list-item>
+  </nb-list>
+</nb-card>

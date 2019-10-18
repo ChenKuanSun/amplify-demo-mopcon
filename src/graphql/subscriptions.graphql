@@ -1,0 +1,46 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreatePrediction {
+  onCreatePrediction {
+    id
+    label
+    count
+  }
+}
+subscription OnUpdatePrediction {
+  onUpdatePrediction {
+    id
+    label
+    count
+  }
+}
+subscription OnDeletePrediction {
+  onDeletePrediction {
+    id
+    label
+    count
+  }
+}
+subscription OnCreateQueryPredictions {
+  onCreateQueryPredictions {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}
+subscription OnUpdateQueryPredictions {
+  onUpdateQueryPredictions {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}
+subscription OnDeleteQueryPredictions {
+  onDeleteQueryPredictions {
+    id
+    predictions {
+      nextToken
+    }
+  }
+}

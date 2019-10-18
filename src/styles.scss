@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~aws-amplify-angular/Theme.css";
+
+// this is your created themes.scss file, make sure the path to the file is correct
+@import "themes.scss";
+
+// framework component styles which will use your new theme
+@import "~@nebular/theme/styles/globals";
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

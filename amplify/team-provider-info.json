@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-demo-mopcon-dev-20191017035159-authRole",
+            "UnauthRoleArn": "arn:aws:iam::176825367871:role/amplify-demo-mopcon-dev-20191017035159-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::176825367871:role/amplify-demo-mopcon-dev-20191017035159-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-demo-mopcon-dev-20191017035159-deployment",
+            "UnauthRoleName": "amplify-demo-mopcon-dev-20191017035159-unauthRole",
+            "StackName": "amplify-demo-mopcon-dev-20191017035159",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:176825367871:stack/amplify-demo-mopcon-dev-20191017035159/6aa1ba50-f04e-11e9-ab93-060a55bcd9e4"
+        },
+        "categories": {
+            "auth": {
+                "amplifydemomopcon9073a02d": {}
+            }
+        }
+    }
+}
