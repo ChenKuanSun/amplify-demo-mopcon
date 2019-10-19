@@ -14,6 +14,15 @@ const awsmobile = {
     "aws_appsync_region": "ap-northeast-1",
     "aws_appsync_authenticationType": "API_KEY",
     "aws_appsync_apiKey": "da2-5nxvd3qoizepvoaahtev3anxsu",
+    "aws_cloud_logic_custom": [
+        {
+            "name": "api3be66bd4",
+            "endpoint": "https://nzwxczyxjh.execute-api.ap-northeast-1.amazonaws.com/dev",
+            "region": "ap-northeast-1"
+        }
+    ],
+    "aws_user_files_s3_bucket": "amplify-demo-mopcon05abc1761b5545a5bd91a493320cbe20-dev",
+    "aws_user_files_s3_bucket_region": "ap-northeast-1",
     "predictions": {
         "identify": {
             "identifyLabels": {
@@ -24,9 +33,7 @@ const awsmobile = {
                 }
             }
         }
-    },
-    "aws_user_files_s3_bucket": "amplify-demo-mopcon0dbbbb668e114d3f8a4f4f35dd7aecb9-dev",
-    "aws_user_files_s3_bucket_region": "ap-northeast-1"
+    }
 };
 
 

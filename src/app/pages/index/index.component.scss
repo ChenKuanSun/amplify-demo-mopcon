@@ -1,5 +1,4 @@
 .example-card {
-
   position: relative;
   width: 100vw;
   max-width: 480px;
@@ -17,7 +16,7 @@ nb-card-body {
   align-items: center;
   width: 100%;
   min-height: 120px;
-  &>div{
+  & > div {
     margin-bottom: 10px;
   }
 }
@@ -48,8 +47,8 @@ nb-list-item {
     height: 50px;
     font-size: 14px;
   }
-  &:hover{
-    background: #E6E6E6;
+  &:hover {
+    background: #e6e6e6;
   }
 }
 
@@ -65,4 +64,9 @@ nb-list-item {
   left: 0;
   top: 0;
   opacity: 0;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 400px;
 }

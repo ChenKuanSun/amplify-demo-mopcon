@@ -36,6 +36,33 @@
 					}
 				}
 			}
+		},
+		"api3be66bd4": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "amplifydemomopcon89b0ec38",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	},
+	"function": {
+		"amplifydemomopcon89b0ec38": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"storage": {
+		"s3a95ea2c2": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
 		}
 	}
 }

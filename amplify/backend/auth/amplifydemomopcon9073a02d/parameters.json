@@ -1,6 +1,6 @@
 {
     "identityPoolName": "amplifydemomopcon9073a02d_identitypool_9073a02d",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "amplif9073a02d",
     "userPoolName": "amplifydemomopcon9073a02d_userpool_9073a02d",
     "autoVerifiedAttributes": [

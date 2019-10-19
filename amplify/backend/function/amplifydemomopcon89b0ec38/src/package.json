@@ -1,0 +1,19 @@
+{
+  "name": "rekognitionPredict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "aws-serverless-express": "^3.3.5",
+    "b64-to-blob": "^1.2.19",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
