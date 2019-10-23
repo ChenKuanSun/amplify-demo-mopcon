@@ -5,9 +5,6 @@ import { concatMap, delay, mergeMap, tap, map, filter } from 'rxjs/operators';
 import { IdentifyLabelsOutput } from '@aws-amplify/predictions/lib/types';
 import { APIService } from 'src/app/API.service.service';
 import { SubSink } from 'subsink';
-// @ts-ignore
-// import { EXIF as exifShim, EXIFStatic } from 'exif-js/exif';
-// const EXIF: EXIFStatic = exifShim;
 
 declare var EXIF: any;
 

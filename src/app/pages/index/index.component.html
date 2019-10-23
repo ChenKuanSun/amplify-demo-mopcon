@@ -6,7 +6,6 @@
       </nb-card-header>
       <nb-card-body [nbSpinner]="loading$ | async" nbSpinnerStatus="info">
         <div>Angular Serverless App</div>
-        {{ orientation | json}}
         <div class="upload-btn-wrapper">
           <button nbButton [status]="'primary'">Take a picture</button>
           <input #cameraInput type="file" accept="image/*" capture="camera" (change)="image$.next($event.target.files[0]); $event.value=''">
